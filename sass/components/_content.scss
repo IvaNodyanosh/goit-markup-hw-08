@@ -1,0 +1,141 @@
+.main-box {
+    padding: 94px 0px;
+}
+
+/* стилызація для фільтрів */
+.filters {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &>li:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__button {
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0.03em;
+        background-color: #F5F4FA;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 22px;
+        transition-property: color, background-color, box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--white-text);
+            background-color: #2196F3;
+            cursor: pointer;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* стилізація секції котенту */
+.content {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    &-link {
+        display: block;
+        text-decoration: none;
+        transition-property: box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 2;
+            letter-spacing: 0.06em;
+            color: var(--primary-color);
+        }
+
+        &__description {
+            font-size: 16px;
+            font-weight: 400px;
+            line-height: 1.9;
+            letter-spacing: 0.03em;
+            color: var(--tetriary-color);
+            margin-top: 4px;
+        }
+
+        &__img {
+            display: block;
+        }
+
+        &__text {
+            padding: 20px 24px;
+            border-left: 1px solid #EEEEEE;
+            border-bottom: 1px solid #EEEEEE;
+            border-right: 1px solid #EEEEEE;
+            width: 370px;
+        }
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+
+        &__box {
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    &-box {
+        padding: 94px 0px;
+    }
+
+    &__li {
+        margin: 15px;
+        width: 1200px / (3 - 30px);
+    }
+}
+
+
+
+
+
+.content-link__signature {
+    position: absolute;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1, 6;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    .content-link:hover &,
+    .content-link:focus & {
+        transform: translateY(-100%);
+    }
+}

@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+    font-family: Roboto, sans-serif;
+    color: var(--primary-color);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section {
+    padding: 94px 0px;
+}
+
+
+.text-phantom {
+    font-size: 0px;
+}
+
+
+
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0px;
+    padding: 0px;
+}

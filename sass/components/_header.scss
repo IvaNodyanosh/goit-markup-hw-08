@@ -1,0 +1,186 @@
+.border-header {
+    border: 1px solid #ECECEC;
+}
+
+/* стилізація логотипа */
+.logo {
+    color: currentColor;
+    font-family: Raleway, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    &-header {
+        margin-right: 93px;
+    }
+
+    &-accent {
+        color: var(--accent-color)
+    }
+
+    &-footer {
+        color: var(--white-text);
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+/* стилізація навігації */
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.navigation {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: currentColor;
+    text-decoration: none;
+    padding: 32px 0px;
+    display: block;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+    }
+
+
+
+    &-list>li:not(:last-child) {
+        margin-right: 50px;
+    }
+
+
+    &-studio,
+    &-portfolio {
+        color: var(--accent-color);
+
+    }
+
+
+    &-studio::after,
+    &-portfolio::after {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 4px;
+
+        background: #2196F3;
+        border-radius: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    &-list li {
+        position: relative;
+    }
+}
+
+
+
+
+
+
+/* стилізація зв'язку */
+.connection {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--tetriary-color);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+
+    &-tel {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--tetriary-color);
+        text-decoration: none;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+
+        &:focus,
+        &:hover {
+            color: var(--accent-color);
+        }
+
+
+        & svg {
+            margin-right: 10px;
+            align-items: center;
+            fill: #757575;
+            transition-property: fill;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:focus svg,
+            &:hover svg {
+                fill: var(--accent-color);
+            }
+        }
+    }
+
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+
+    & svg {
+        margin-right: 10px;
+        align-items: center;
+        fill: #757575;
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+
+
+
+    &-container {
+        margin-left: auto;
+        align-items: center;
+    }
+
+    &-container li:first-child {
+        margin-right: 30px;
+    }
+
+
+    &:hover svg,
+    &:focus svg {
+        fill: var(--accent-color);
+    }
+}
