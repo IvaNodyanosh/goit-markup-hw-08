@@ -13,13 +13,22 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 .section {
   padding: 94px 0px;
 }
@@ -100,14 +109,15 @@ p {
 .logo {
   color: currentColor;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-}
-.logo-header {
-  margin-right: 93px;
+  padding: 16px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .logo-accent {
   color: var(--accent-color);
@@ -118,31 +128,33 @@ p {
   margin-bottom: 20px;
 }
 
-/* стилізація навігації */
-header ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .header-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+.header-list > button {
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: 23px;
+}
+.header-list > button:hover, .header-list > button:focus {
+  fill: var(--accent-color);
+}
+
+/* стилізація навігації */
+header ul {
+  list-style: none;
 }
 
 .navigation {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.02;
   letter-spacing: 0.02em;
   color: currentColor;
   text-decoration: none;
-  padding: 32px 0px;
   display: block;
   -webkit-transition-property: color;
   transition-property: color;
@@ -151,36 +163,26 @@ header ul {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.navigation-list > li:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+.navigation-list {
+  margin-top: 48px;
+  margin-bottom: 302px;
+}
 .navigation:focus, .navigation:hover {
   color: var(--accent-color);
 }
-.navigation-list > li:not(:last-child) {
-  margin-right: 50px;
-}
 .navigation-studio, .navigation-portfolio {
   color: var(--accent-color);
-}
-.navigation-studio::after, .navigation-portfolio::after {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 4px;
-  background: #2196F3;
-  border-radius: 2px;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.navigation-list li {
-  position: relative;
 }
 
 /* стилізація зв'язку */
 .connection {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   letter-spacing: 0.02em;
   color: var(--tetriary-color);
   text-decoration: none;
@@ -190,19 +192,15 @@ header ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 .connection-tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--tetriary-color);
+  font-weight: 500px;
   text-decoration: none;
   -webkit-transition-property: color;
   transition-property: color;
@@ -210,9 +208,10 @@ header ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2196F3;
 }
 .connection-tel:focus, .connection-tel:hover {
   color: var(--accent-color);
@@ -229,8 +228,9 @@ header ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
-.connection-tel svg:focus svg, .connection-tel svg:hover svg {
+.connection-tel:focus svg, .connection-tel:hover svg {
   fill: var(--accent-color);
 }
 .connection:hover, .connection:focus {
@@ -248,18 +248,86 @@ header ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
 }
 .connection-container {
   margin-left: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-.connection-container li:first-child {
-  margin-right: 30px;
+.connection-container li:last-of-type {
+  margin-bottom: 32px;
+}
+.connection-container li:first-of-type {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-bottom: 64px;
 }
 .connection:hover svg, .connection:focus svg {
   fill: var(--accent-color);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFFFFF;
+  padding: 48px 0px 48px 40px;
+  z-index: 2;
+  overflow-y: scroll;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.mobile-menu .is-open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.mobile-menu button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 25px;
+  top: 21px;
+}
+.mobile-menu button:hover, .mobile-menu button:focus {
+  fill: var(--accent-color);
+}
+
+.mobile-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mobile-social a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+}
+.mobile-social li:not(:first-child)::before {
+  content: "";
+  width: 22px;
+  height: 0px;
+  left: 315px;
+  top: 726px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin: 0 10px;
 }
 
 .address {
