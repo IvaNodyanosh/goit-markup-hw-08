@@ -576,8 +576,9 @@ header ul {
 
 .text-hero {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6;
+  text-align: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-text);
@@ -1064,13 +1065,18 @@ header ul {
   padding: 40px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    max-width: 450px;
+  }
+}
 .form-modal > p {
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 12px;
 }
 
 /* 
@@ -1186,8 +1192,8 @@ header ul {
 }
 .condition-box > label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: #757575;
   display: -webkit-box;
@@ -1197,14 +1203,13 @@ header ul {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  margin-left: 24px;
 }
 .condition-link {
   color: var(--accent-color);
 }
 
 .check {
-  position: relative;
+  position: absolute;
   margin-right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1322,4 +1327,8 @@ header ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.check-text {
+  margin-left: 32px;
 }/*# sourceMappingURL=main.css.map */
