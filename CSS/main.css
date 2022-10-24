@@ -573,8 +573,8 @@ header ul {
   height: 600px;
   max-width: 1600px;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/Img-hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url(../img/Img-hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/header-480.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url(../img/header-480.jpg);
   background-color: #C4C4C4;
   background-size: cover;
   padding: 200px 0px;
@@ -592,21 +592,28 @@ header ul {
   border-radius: 4px;
 }
 
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../img/header-960.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4) 50%, rgba(47, 48, 58, 0.4)), url("../img/header-960.jpg");
+  }
+}
 .advantages {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1200px- 360px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .advantages-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   margin: 0px 0px 10px 0px;
-}
-.advantages > li:not(:nth-child(4n+1)) {
-  margin-left: 30px;
+  text-align: center;
 }
 .advantages-description {
   font-size: 14px;
@@ -616,11 +623,11 @@ header ul {
 }
 
 .section-advantages {
-  padding-bottom: 0px;
+  padding-bottom: 60px;
 }
 
 .background-svg {
-  width: 270px;
+  max-width: 480px;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
@@ -647,6 +654,11 @@ header ul {
   display: flex;
 }
 
+@media screen and (max-width: 1200px) {
+  .section-work {
+    display: none;
+  }
+}
 .work {
   position: relative;
 }
