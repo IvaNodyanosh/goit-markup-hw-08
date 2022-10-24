@@ -2,6 +2,7 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     & svg {
         fill: #AFB1B8;
@@ -12,7 +13,7 @@
 
     & a {
         height: 92px;
-        width: 170px;
+        width: 210px;
         display: flex;
         align-items: center;
         border: 1px solid #AFB1B8;
@@ -26,6 +27,10 @@
     & li {
         margin-right: 15px;
         margin-left: 15px;
+
+        &:nth-of-type(n-4) {
+            margin-bottom: 30px;
+        }
     }
 
     & a:hover,
