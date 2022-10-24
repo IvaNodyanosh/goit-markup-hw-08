@@ -13,7 +13,6 @@
 
     & a {
         height: 92px;
-        width: 210px;
         display: flex;
         align-items: center;
         border: 1px solid #AFB1B8;
@@ -27,6 +26,7 @@
     & li {
         margin-right: 15px;
         margin-left: 15px;
+        width: calc((100% - 60px) / 2);
 
         &:nth-of-type(n-4) {
             margin-bottom: 30px;

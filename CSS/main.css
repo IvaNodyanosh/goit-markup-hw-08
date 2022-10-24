@@ -842,7 +842,6 @@ header ul {
 }
 .customers-list a {
   height: 92px;
-  width: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,6 +863,7 @@ header ul {
 .customers-list li {
   margin-right: 15px;
   margin-left: 15px;
+  width: calc((100% - 60px) / 2);
 }
 .customers-list li:nth-of-type(n-4) {
   margin-bottom: 30px;
@@ -1054,8 +1054,7 @@ header ul {
 }
 
 .modal {
-  height: 581px;
-  width: 528px;
+  max-width: 450px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
