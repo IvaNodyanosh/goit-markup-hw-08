@@ -36,7 +36,7 @@
         background-color: var(--white-text);
         border-radius: 0px 0px 4px 4px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        max-width: calc(100vw - 30px);
+        max-width: calc(100% - 30px);
         display: block;
     }
 
@@ -44,16 +44,17 @@
     &__list {
         display: flex;
         flex-direction: column;
+        margin: -15px;
 
-        &>li:not(:last-of-type) {
-            margin-bottom: 30px;
+        &>li {
+            margin: 15px;
+            width: calc(100%-30px);
         }
     }
 
     &__text {
         padding: 30px 0;
         margin: 0 5px;
-        max-width: calc(100vw - 30px);
     }
 
     &__svg {
@@ -95,5 +96,30 @@
     .team__link:hover &,
     .team__link:focus & {
         fill: #FFFFFF;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .team {
+        &__card {
+            width: calc((100% - 60px)/2);
+        }
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .team {
+        &__card {
+            width: calc((100% - 120px)/4);
+        }
     }
 }

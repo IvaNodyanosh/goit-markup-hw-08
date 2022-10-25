@@ -13,6 +13,7 @@
     text-decoration: none;
     padding: 16px 0;
     display: flex;
+    align-items: center;
 
 
     &-accent {
@@ -28,21 +29,9 @@
     }
 }
 
-.header-list {
-    display: flex;
 
-    &>button {
-        border: none;
-        background-color: transparent;
-        margin-left: auto;
-        margin-right: 23px;
 
-        &:hover,
-        &:focus {
-            fill: var(--accent-color);
-        }
-    }
-}
+
 
 
 
@@ -71,8 +60,8 @@ header ul {
 
 .navigation {
     font-weight: 500;
-    font-size: 40px;
-    line-height: 1.02;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     color: currentColor;
     text-decoration: none;
@@ -82,14 +71,8 @@ header ul {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
-    &-list>li:not(:last-of-type) {
-        margin-bottom: 32px;
-    }
 
-    &-list {
-        margin-top: 48px;
-        margin-bottom: 302px;
-    }
+
 
 
     &:focus,
@@ -105,6 +88,25 @@ header ul {
 
     }
 
+
+    &-studio::after,
+    &-portfolio::after {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 4px;
+
+        background: #2196F3;
+        border-radius: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    &-list li {
+        position: relative;
+    }
 }
 
 
@@ -114,12 +116,11 @@ header ul {
 
 /* стилізація зв'язку */
 .connection {
+    display: flex;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 1.2;
+    font-size: 14px;
+    line-height: 16px;
     letter-spacing: 0.02em;
-    letter-spacing: 0.02em;
-
     color: var(--tetriary-color);
     text-decoration: none;
     transition-property: color;
@@ -129,15 +130,16 @@ header ul {
     order: 3;
 
     &-tel {
-        font-weight: 500px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: var(--tetriary-color);
         text-decoration: none;
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        font-size: 34px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2196F3;
+
 
         &:focus,
         &:hover {
@@ -152,7 +154,6 @@ header ul {
             transition-property: fill;
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            display: none;
         }
 
         &:focus svg,
@@ -174,29 +175,14 @@ header ul {
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        display: none;
+        display: block;
     }
 
 
 
 
 
-    &-container {
-        margin-left: auto;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
-        & li:last-of-type {
-            margin-bottom: 32px;
-        }
-
-        & li:first-of-type {
-            order: 1;
-            margin-bottom: 64px;
-        }
-    }
 
 
 
@@ -208,62 +194,237 @@ header ul {
 }
 
 
-
-
-
-
-
-
-
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #FFFFFF;
-    padding: 48px 0px 48px 40px;
-    z-index: 2;
-    overflow-y: scroll;
-    transform: translateX(100%);
-
-    & button {
-        border: none;
-        background-color: transparent;
-        position: absolute;
-        right: 25px;
-        top: 21px;
-
-        &:hover,
-        &:focus {
-            fill: var(--accent-color);
-        }
-    }
+.mobile-menu>button {
+    display: none;
 }
 
-.is-open {
-    transform: translateX(0);
+.header-list>button {
+    display: none;
 }
 
 .mobile-social {
-    display: flex;
+    display: none;
+}
 
-    & a {
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.2;
-        letter-spacing: 0.02em;
-        color: #2196F3;
+@media screen and (max-width: 767px) {
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFFFFF;
+        padding: 48px 0px 48px 40px;
+        z-index: 2;
+        overflow-y: scroll;
+        transform: translateX(100%);
+
+
+
+        & button {
+            display: block;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            right: 25px;
+            top: 21px;
+
+            &:hover,
+            &:focus {
+                fill: var(--accent-color);
+            }
+        }
     }
 
-    & li:not(:first-child)::before {
-        content: '';
-        width: 22px;
-        height: 0px;
-        left: 315px;
-        top: 726px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        margin: 0 10px;
+    .is-open {
+        transform: translateX(0);
+    }
+
+
+
+
+    .mobile-social {
+        display: flex;
+
+        & a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: #2196F3;
+        }
+
+        & li:not(:first-child)::before {
+            content: '';
+            width: 22px;
+            height: 0px;
+            left: 315px;
+            top: 726px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            margin: 0 10px;
+        }
+    }
+
+    .header-list {
+        display: flex;
+
+        &>button {
+            display: block;
+            border: none;
+            background-color: transparent;
+            margin-left: auto;
+            margin-right: 23px;
+
+            &:hover,
+            &:focus {
+                fill: var(--accent-color);
+            }
+        }
+    }
+
+    .navigation {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.02;
+        letter-spacing: 0.02em;
+        color: currentColor;
+
+
+        &-list {
+            margin-top: 48px;
+            margin-bottom: 302px;
+
+            &>li:not(:last-of-type) {
+                margin-bottom: 32px;
+            }
+        }
+
+        &-studio,
+        &-portfolio {
+            color: var(--accent-color);
+
+        }
+
+        &-studio::after,
+        &-portfolio::after {
+            display: none;
+        }
+    }
+
+
+
+    .connection {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+
+        &-tel {
+            font-weight: 500px;
+            font-size: 34px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: #2196F3;
+
+            & svg {
+                display: none;
+            }
+        }
+
+        &-container {
+            margin-left: auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            & li:last-of-type {
+                margin-bottom: 32px;
+            }
+
+            & li:first-of-type {
+                order: 1;
+                margin-bottom: 64px;
+            }
+
+            & svg {
+                display: none;
+            }
+        }
+    }
+
+}
+
+
+@media screen and(min-width: 768px) {
+
+    .navigation-list {
+        display: flex;
+        margin-left: 90px;
+
+        & li:not(:first-of-type) {
+            margin-left: 50px;
+        }
+    }
+
+
+    .navigation {
+        display: block;
+        padding: 32px 0;
+    }
+
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+    }
+
+    .connection {
+
+        &-tel {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+
+
+    }
+
+
+
+
+
+    header ul {
+        display: flex;
+    }
+
+
+    .header-list {
+        display: flex;
+    }
+
+
+
+    .connection-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+}
+
+
+
+@media screen and(min-width: 1200px) {
+    .connection-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .connection-tel {
+        margin-top: 0;
+        margin-left: 30px;
     }
 }

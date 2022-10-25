@@ -27,33 +27,33 @@
                             height="18px">
                             <use href="./img/symbol-defs.svg#menu"></use>
                         </svg></button>
-                </div>
-                <div class="mobile-menu js-menu-container" id="mobile-menu">
-                    <button class="js-close-menu"><svg width="24px" height="24px">
-                            <use href="./img/symbol-defs.svg#close"></use>
-                        </svg></button>
-                    <nav>
-                        <ul class="navigation-list">
-                            <li><a href="./" class="navigation-studio navigation">Студія</a></li>
-                            <li><a href="./portfolio.html" class="navigation">Портфоліо</a></li>
-                            <li><a href="" class="navigation">Контакти</a></li>
+                    <div class="mobile-menu js-menu-container" id="mobile-menu">
+                        <button class="js-close-menu"><svg width="24px" height="24px">
+                                <use href="./img/symbol-defs.svg#close"></use>
+                            </svg></button>
+                        <nav>
+                            <ul class="navigation-list">
+                                <li><a href="./" class="navigation-studio navigation">Студія</a></li>
+                                <li><a href="./portfolio.html" class="navigation">Портфоліо</a></li>
+                                <li><a href="" class="navigation">Контакти</a></li>
+                            </ul>
+                        </nav>
+                        <ul class="connection-container">
+                            <li><a href="mailto:info@devstudio.com" class="connection"><svg width="16px" height="12px">
+                                        <use href="./img/symbol-defs.svg#envelope"></use>
+                                    </svg>info@devstudio.com</a>
+                            </li>
+                            <li><a href="tel:+380961111111" class="connection-tel"><svg height="16px" width="10px">
+                                        <use href="./img/symbol-defs.svg#tel"></use>
+                                    </svg>+38 096 111 11 11</a></li>
                         </ul>
-                    </nav>
-                    <ul class="connection-container">
-                        <li><a href="mailto:info@devstudio.com" class="connection"><svg width="16px" height="12px">
-                                    <use href="./img/symbol-defs.svg#envelope"></use>
-                                </svg>info@devstudio.com</a>
-                        </li>
-                        <li><a href="tel:+380961111111" class="connection-tel"><svg height="16px" width="10px">
-                                    <use href="./img/symbol-defs.svg#tel"></use>
-                                </svg>+38 096 111 11 11</a></li>
-                    </ul>
-                    <ul class="mobile-social">
-                        <li><a href="">Instagram</a></li>
-                        <li><a href="">Twitter</a></li>
-                        <li><a href="">Facebook</a></li>
-                        <li><a href="">LinkedIn</a></li>
-                    </ul>
+                        <ul class="mobile-social">
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">LinkedIn</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,8 +62,10 @@
         <!--створив секцію герой-->
         <section class="hero">
             <div class="container">
-                <h1 class="text-hero">Ефективні рішення для <br> вашого бізнесу</h1>
-                <button class="hero-button" data-modal-open>Замовити послугу</button>
+                <div class="hero-container">
+                    <h1 class="text-hero">Ефективні рішення для <br> вашого бізнесу</h1>
+                    <button class="hero-button" data-modal-open>Замовити послугу</button>
+                </div>
             </div>
         </section>
         <!--сторив секцію наші переваги-->
@@ -147,7 +149,10 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__card">
-                        <img class="team__img" src="./img/img3.jpg" width="100%" alt="молодий чоловік в окулярах">
+                        <img class="team__img"
+                            srcset="./img/igor-450.jpg 450w, ./img/igor-900.jpg 900w, ./img/igor-270.jpg 270w, ./img/igor-540.jpg 540w, ./img/igor-354.jpg 354w, ./img/igor-708.jpg 708w"
+                            sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
+                            src="./img/igor-450.jpg" width="100%" alt="молодий чоловік в окулярах">
                         <div class="team__text">
                             <h3 class="team__employee">Ігор Дем'яненко</h3>
                             <p class="team__profession">Product Designer</p>
@@ -175,7 +180,10 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img class="team__img" src="./img/img4.jpg" width="100%" alt="молода жінка в окулярах">
+                        <img class="team__img"
+                            srcset="./img/olga-450.jpg 450w, ./img/olga-900.jpg 900w, ./img/olga-270.jpg 270w, ./img/olga-540.jpg 540w, ./img/olga-354.jpg 354w, ./img/olga-708.jpg 708w"
+                            sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
+                            src="./img/olga-450.jpg" width="100%" alt="молода жінка в окулярах">
                         <div class="team__text">
                             <h3 class="team__employee">Ольга Рєпіна</h3>
                             <p class="team__profession">Frontend Developer</p>
@@ -203,7 +211,10 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img class="team__img" src="./img/img5.jpg" width="100%" alt="молодий чоловік у рубашці ">
+                        <img class="team__img"
+                            srcset="./img/mikola-450.jpg 450w, ./img/mikola-900.jpg 900w, ./img/mikola-270.jpg 270w, ./img/mikola-540.jpg 540w, ./img/mikola-354.jpg 354w, ./img/mikola-708.jpg 708w"
+                            sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
+                            src="./img/mikola-450.jpg" width="100%" alt="молодий чоловік у рубашці ">
                         <div class="team__text">
                             <h3 class="team__employee">Микола Тарасов</h3>
                             <p class="team__profession">Marketing</p>
@@ -231,7 +242,10 @@
                         </div>
                     </li>
                     <li class="team__card">
-                        <img class="team__img" src="./img/img6.jpg" width="100%" alt="молодий чоловік у футболці">
+                        <img class="team__img"
+                            srcset="./img/mikhail-450.jpg 450w, ./img/mikhail-900.jpg 900w, ./img/mikhail-270.jpg 270w, ./img/mikhail-540.jpg 540w, ./img/mikhail-354.jpg 354w, ./img/mikhail-708.jpg 708w"
+                            sizes="(min-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
+                            src="./img/mikhail-450.jpg" width="100%" alt="молодий чоловік у футболці">
                         <div class="team__text">
                             <h3 class="team__employee">Михайло Єрмаков</h3>
                             <p class="team__profession">UI Designer</p>
