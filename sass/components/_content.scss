@@ -41,7 +41,7 @@
 
 
 .container-filters {
-    margin-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 
@@ -110,7 +110,7 @@
     }
 
     &-box {
-        padding: 94px 0px;
+        padding: 60px 0px;
     }
 
     &__li {
@@ -157,12 +157,24 @@
             width: calc((100% - 60px)/2);
         }
     }
+
+    .container-filters {
+        padding-bottom: 30px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
 
     .content__li {
         width: calc((100% - 90px)/3);
+    }
+
+    .content-box {
+        padding: 94px 0;
+    }
+
+    .container-filters {
+        padding-bottom: 50px;
     }
 
 }

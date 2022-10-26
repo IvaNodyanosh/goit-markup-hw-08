@@ -1243,7 +1243,7 @@ header ul {
 }
 
 .container-filters {
-  margin-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 /* стилізація секції котенту */
@@ -1305,7 +1305,7 @@ header ul {
   overflow: hidden;
 }
 .content-box {
-  padding: 94px 0px;
+  padding: 60px 0px;
 }
 .content__li {
   margin: 15px;
@@ -1352,10 +1352,19 @@ header ul {
   .content__li {
     width: calc((100% - 60px) / 2);
   }
+  .container-filters {
+    padding-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .content__li {
     width: calc((100% - 90px) / 3);
+  }
+  .content-box {
+    padding: 94px 0;
+  }
+  .container-filters {
+    padding-bottom: 50px;
   }
 }
 .button-modal {
