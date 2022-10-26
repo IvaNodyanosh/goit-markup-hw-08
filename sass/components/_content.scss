@@ -6,12 +6,10 @@
 .filters {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: -12.5px -4px;
 
-    &>li:not(:last-child) {
-        margin-right: 8px;
-    }
 
     &__button {
         font-family: inherit;
@@ -27,6 +25,8 @@
         transition-property: color, background-color, box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        margin: 12.5px 4px;
+
 
         &:hover,
         &:focus {
@@ -39,6 +39,10 @@
 
 }
 
+
+.container-filters {
+    margin-bottom: 50px;
+}
 
 
 
@@ -54,6 +58,7 @@
 .content {
     list-style: none;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin: -15px;
 
@@ -63,6 +68,10 @@
         transition-property: box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+        border-left: 1px solid #EEEEEE;
+        border-bottom: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
 
         &__title {
             font-weight: 700;
@@ -87,10 +96,6 @@
 
         &__text {
             padding: 20px 24px;
-            border-left: 1px solid #EEEEEE;
-            border-bottom: 1px solid #EEEEEE;
-            border-right: 1px solid #EEEEEE;
-            width: 370px;
         }
 
         &:hover,
@@ -110,6 +115,7 @@
 
     &__li {
         margin: 15px;
+        max-width: 450px;
     }
 }
 
@@ -137,4 +143,26 @@
     .content-link:focus & {
         transform: translateY(-100%);
     }
+}
+
+@media screen and (min-width: 768px) {
+    .filters {
+        justify-content: center;
+    }
+
+    .content {
+        justify-content: flex-start;
+
+        &__li {
+            width: calc((100% - 60px)/2);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .content__li {
+        width: calc((100% - 120px)/3);
+    }
+
 }
