@@ -1324,7 +1324,7 @@ header ul {
 }
 @media screen and (min-width: 1200px) {
   .content__li {
-    width: calc((100% - 120px) / 3);
+    width: calc((100% - 90px) / 3);
   }
 }
 .button-modal {
