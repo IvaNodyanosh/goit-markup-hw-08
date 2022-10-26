@@ -718,6 +718,14 @@ header ul {
     width: 450px;
   }
 }
+@media screen and (max-width: 768px) {
+  .footer-address {
+    margin-bottom: 60px;
+  }
+  .social-link {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-address-social {
     display: -webkit-box;
