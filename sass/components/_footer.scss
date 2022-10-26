@@ -101,7 +101,6 @@
      margin-top: 60px;
      display: flex;
      flex-direction: column;
-     align-items: center;
  }
 
  .subscribe-label {
@@ -187,4 +186,61 @@
 
  .subscribe-email {
      justify-content: center;
+ }
+
+
+ @media screen and (min-width: 768px) {
+     .footer-address-social {
+         display: flex;
+     }
+
+     .social-link {
+         margin-top: 65px;
+         margin-left: auto;
+     }
+
+     .footer-address {
+         padding-bottom: 0px;
+     }
+ }
+
+
+
+ @media screen and (min-width: 1200px) {
+     .social-link {
+         margin-left: 70px;
+
+         &>p {
+             text-align: start;
+         }
+     }
+
+     .logo-footer {
+         text-align: start;
+     }
+
+     .subscribe-label {
+         text-align: start;
+     }
+
+     .container-address {
+         text-align: start;
+     }
+
+     .container-footer {
+         display: flex;
+     }
+
+     .form-subscribe {
+         margin-left: auto;
+     }
+
+     .subscribe-box {
+         flex-direction: row;
+
+         &>button {
+             margin-top: 0;
+             margin-left: 12px;
+         }
+     }
  }

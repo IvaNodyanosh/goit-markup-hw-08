@@ -463,6 +463,9 @@ header ul {
     margin-top: 0;
     margin-left: 30px;
   }
+  .logo {
+    font-size: 26px;
+  }
 }
 .address {
   text-decoration: none;
@@ -567,9 +570,6 @@ header ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .subscribe-label {
@@ -705,6 +705,55 @@ header ul {
           justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-address-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .social-link {
+    margin-top: 65px;
+    margin-left: auto;
+  }
+  .footer-address {
+    padding-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social-link {
+    margin-left: 70px;
+  }
+  .social-link > p {
+    text-align: start;
+  }
+  .logo-footer {
+    text-align: start;
+  }
+  .subscribe-label {
+    text-align: start;
+  }
+  .container-address {
+    text-align: start;
+  }
+  .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .form-subscribe {
+    margin-left: auto;
+  }
+  .subscribe-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .subscribe-box > button {
+    margin-top: 0;
+    margin-left: 12px;
+  }
+}
 .text-hero {
   font-weight: 900;
   font-size: 26px;
@@ -916,7 +965,8 @@ header ul {
   background-color: var(--secondary-background);
 }
 .team__title {
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
@@ -942,12 +992,11 @@ header ul {
   display: block;
 }
 .team__card {
+  max-width: calc(100% - 30px);
   background-color: var(--white-text);
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  max-width: calc(100% - 30px);
-  display: block;
 }
 .team__list {
   display: -webkit-box;
@@ -1025,6 +1074,16 @@ header ul {
         flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .team__card {
+    width: calc((100% - 120px) / 4);
+  }
+}
 .customers-list {
   list-style: none;
   display: -webkit-box;
@@ -1035,6 +1094,7 @@ header ul {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: -15px;
 }
 .customers-list svg {
   fill: #AFB1B8;
@@ -1064,14 +1124,11 @@ header ul {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
 }
-.customers-list li {
-  margin-right: 15px;
-  margin-left: 15px;
+.customers-list > li {
+  margin: 15px;
   width: calc((100% - 60px) / 2);
-}
-.customers-list li:nth-of-type(n-4) {
-  margin-bottom: 30px;
 }
 .customers-list a:hover, .customers-list a:focus {
   border: 1px solid var(--accent-color);
@@ -1081,18 +1138,33 @@ header ul {
 }
 
 .customers-section {
-  margin: 94px -15px;
+  padding: 60px 0;
 }
 
 .customers-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .customers-list > li {
+    width: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers-list > li {
+    width: calc((100% - 180px) / 6);
+  }
+  .customers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
 .main-box {
   padding: 94px 0px;
 }
@@ -1199,7 +1271,6 @@ header ul {
 }
 .content__li {
   margin: 15px;
-  width: -44.4444444444;
 }
 
 .content-link__signature {
@@ -1266,21 +1337,23 @@ header ul {
           transform: translate(-50%, -50%);
   background-color: #FFFFFF;
   position: absolute;
-  padding: 40px;
 }
 
 @media screen and (max-width: 479px) {
   .modal {
-    max-width: 450px;
+    width: calc(100% - 30px);
   }
 }
+.form-modal {
+  padding: 40px;
+}
 .form-modal > p {
-  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
 
 /* 
@@ -1535,4 +1608,15 @@ header ul {
 
 .check-text {
   margin-left: 32px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+  .form-modal > p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15px;
+  }
 }/*# sourceMappingURL=main.css.map */

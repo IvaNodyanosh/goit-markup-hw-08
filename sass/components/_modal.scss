@@ -35,25 +35,27 @@
     transform: translate(-50%, -50%);
     background-color: #FFFFFF;
     position: absolute;
-    padding: 40px;
 }
 
 @media screen and (max-width: 479px) {
     .modal {
-        max-width: 450px;
+        width: calc(100% - 30px);
     }
 }
 
 
 
-.form-modal>p {
-    margin-bottom: 12px;
+.form-modal {
+    padding: 40px;
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    letter-spacing: 0.03em;
+    &>p {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-bottom: 12px;
+    }
 }
 
 
@@ -285,4 +287,17 @@
 
 .check-text {
     margin-left: 32px;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .modal {
+        width: 528px;
+    }
+
+    .form-modal>p {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15px;
+    }
 }
