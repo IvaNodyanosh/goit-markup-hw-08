@@ -34,15 +34,10 @@
 
      &-address {
          color: var(--white-text);
-         padding: 60px 0px;
          display: block;
      }
  }
 
-
- .container-footer {
-     padding-bottom: 60px;
- }
 
 
 
@@ -98,7 +93,6 @@
 
 
  .form-subscribe {
-     margin-top: 60px;
      display: flex;
      flex-direction: column;
  }
@@ -123,7 +117,6 @@
      align-items: center;
 
      &>input {
-         width: 358px;
          height: 50px;
          border: 1px solid rgba(255, 255, 255, 0.3);
          border-radius: 4px;
@@ -186,27 +179,50 @@
 
  .subscribe-email {
      justify-content: center;
+
  }
 
+
+ @media screen and (max-width: 480px) {
+     .subscribe-box>input {
+         max-width: 450px;
+     }
+ }
+
+ @media screen and (min-width: 480px) {
+     .subscribe-box>input {
+         width: 450px;
+     }
+ }
 
  @media screen and (min-width: 768px) {
      .footer-address-social {
          display: flex;
+         justify-content: center;
      }
 
-     .social-link {
-         margin-top: 65px;
-         margin-left: auto;
-     }
 
      .footer-address {
-         padding-bottom: 0px;
+         margin-right: 165px;
+         padding-bottom: 0;
+     }
+
+     .form-subscribe {
+         margin-top: 60px;
      }
  }
 
 
 
  @media screen and (min-width: 1200px) {
+     .subscribe-box>input {
+         width: 358px;
+     }
+
+     .footer-address {
+         margin-right: 0;
+     }
+
      .social-link {
          margin-left: 70px;
 
@@ -233,6 +249,7 @@
 
      .form-subscribe {
          margin-left: auto;
+         margin-top: 0;
      }
 
      .subscribe-box {

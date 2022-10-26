@@ -2,6 +2,7 @@
     &-work {
         padding-bottom: 94px;
         padding-top: 118px;
+        display: none;
     }
 
     & ul {
@@ -10,9 +11,9 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
     .section-work {
-        display: none;
+        display: block;
     }
 }
 
