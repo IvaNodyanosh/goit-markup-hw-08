@@ -37,6 +37,15 @@
     position: absolute;
 }
 
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #212121;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
 @media screen and (max-width: 479px) {
     .modal {
         width: calc(100% - 30px);
@@ -47,16 +56,9 @@
 
 .form-modal {
     padding: 40px;
-
-    &>p {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.5;
-        text-align: center;
-        letter-spacing: 0.03em;
-        margin-bottom: 12px;
-    }
 }
+
+
 
 
 
@@ -295,9 +297,7 @@
         width: 528px;
     }
 
-    .form-modal>p {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 1.15px;
+    .modal-title {
+        line-height: 1.15;
     }
 }
