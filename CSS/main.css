@@ -704,7 +704,7 @@ footer {
 
 @media screen and (max-width: 480px) {
   .subscribe-box > input {
-    width: 100%;
+    width: calc(100% - 30px);
   }
 }
 @media screen and (min-width: 480px) {
@@ -872,6 +872,9 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: -15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .advantages-title {
   font-size: 14px;
@@ -907,6 +910,11 @@ footer {
           justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+  .advantages > li {
+    width: calc(100% - 30px);
+  }
+}
 @media screen and (min-width: 768px) {
   .advantages {
     -webkit-box-orient: horizontal;
