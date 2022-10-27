@@ -216,7 +216,6 @@ header ul {
         background: #FFFFFF;
         padding: 48px 0px 48px 40px;
         z-index: 2;
-        overflow-y: scroll;
         transform: translateX(100%);
 
 
@@ -262,8 +261,15 @@ header ul {
             left: 315px;
             top: 726px;
             border: 1px solid rgba(33, 33, 33, 0.2);
-            margin: 0 10px;
+            margin-right: 10px;
         }
+
+        & li:not(:last-child) {
+            margin-right: 10px;
+        }
+
+
+        flex-wrap: wrap;
     }
 
     .header-list {

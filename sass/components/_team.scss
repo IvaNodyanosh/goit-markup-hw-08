@@ -1,12 +1,13 @@
 .team {
     background-color: var(--secondary-background);
+    padding: 60px 0;
 
     &__title {
         font-weight: 700;
         font-size: 28px;
         line-height: 1.2;
         letter-spacing: 0.03em;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         text-align: center;
     }
 
@@ -118,10 +119,13 @@
 
 @media screen and (min-width: 1200px) {
     .team {
+        padding: 94px 0;
+
         &__title {
             font-weight: 700;
             font-size: 36px;
             line-height: 1.2;
+            margin-bottom: 50px;
         }
 
         &__card {

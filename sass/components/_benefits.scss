@@ -2,11 +2,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    margin: -15px;
 
-
-    & li:not(:last-of-type) {
-        margin-bottom: 30px;
-    }
 
     &-title {
         font-size: 14px;
@@ -25,13 +22,14 @@
 }
 
 
-
-
-
-
-.section-advantages {
-    padding-bottom: 60px;
+.container-advantages {
+    padding: 60px 0;
 }
+
+
+
+
+
 
 .background-svg {
     height: 120px;
@@ -49,7 +47,6 @@
     .advantages {
         flex-direction: row;
         flex-wrap: wrap;
-        margin: -15px;
 
         &-title {
             text-align: start;

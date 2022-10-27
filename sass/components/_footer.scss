@@ -183,9 +183,14 @@
  }
 
 
+ footer {
+     padding: 60px 0;
+ }
+
+
  @media screen and (max-width: 480px) {
      .subscribe-box>input {
-         max-width: 450px;
+         width: 100%;
      }
  }
 
@@ -212,6 +217,7 @@
      .footer-address-social {
          display: flex;
          justify-content: center;
+         align-items: baseline;
      }
 
 
@@ -258,6 +264,7 @@
 
      .container-footer {
          display: flex;
+         align-items: baseline;
      }
 
      .form-subscribe {
@@ -272,5 +279,9 @@
              margin-top: 0;
              margin-left: 12px;
          }
+     }
+
+     footer {
+         padding: 94px 0;
      }
  }

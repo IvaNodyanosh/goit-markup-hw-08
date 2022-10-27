@@ -24,6 +24,8 @@ body {
     margin: 0 auto;
 }
 
+
+
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -34,28 +36,12 @@ body {
     .container {
         max-width: 1200px;
     }
-
-    .section {
-        padding: 94px;
-    }
-
-    .footer {
-        padding: 94px;
-    }
-
-
 }
 
 
 
 
-.section {
-    padding: 60px 0;
-}
 
-.footer {
-    padding: 60px 0;
-}
 
 
 .text-phantom {
