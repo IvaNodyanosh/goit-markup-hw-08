@@ -188,7 +188,7 @@
  }
 
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-width: 479px) {
      .subscribe-box>input {
          width: calc(100% - 30px);
      }
@@ -199,9 +199,6 @@
      .subscribe-box>input {
          width: 450px;
      }
- }
-
- @media screen and (max-width: 768px) {
 
      .footer-address {
          margin-bottom: 60px;
@@ -211,6 +208,7 @@
          margin-bottom: 60px;
      }
  }
+
 
 
  @media screen and (min-width: 768px) {
@@ -223,11 +221,15 @@
 
      .footer-address {
          margin-right: 165px;
-         padding-bottom: 0;
+         margin-bottom: 0;
      }
 
      .form-subscribe {
          margin-top: 60px;
+     }
+
+     .social-link {
+         margin-bottom: 0px;
      }
  }
 

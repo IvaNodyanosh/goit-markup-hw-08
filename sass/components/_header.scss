@@ -239,8 +239,15 @@ header ul {
         transform: translateX(0);
     }
 
+    nav {
+        margin-top: 48px;
+        margin-bottom: auto;
+    }
 
-
+    .js-menu-container {
+        display: flex;
+        flex-direction: column;
+    }
 
     .mobile-social {
         display: flex;
@@ -298,8 +305,7 @@ header ul {
 
 
         &-list {
-            margin-top: 48px;
-            margin-bottom: 302px;
+            margin-bottom: auto;
 
             &>li:not(:last-of-type) {
                 margin-bottom: 32px;
@@ -339,7 +345,6 @@ header ul {
         }
 
         &-container {
-            margin-left: auto;
             align-items: center;
             display: flex;
             flex-direction: column;
