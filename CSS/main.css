@@ -519,6 +519,9 @@ header ul {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
+.social-link {
+  margin-bottom: 60px;
+}
 .social-link > p {
   text-transform: uppercase;
   font-weight: 700;
@@ -711,6 +714,10 @@ footer {
   padding: 60px 0;
 }
 
+.footer-address {
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 479px) {
   .subscribe-box > input {
     width: calc(100% - 30px);
@@ -719,12 +726,6 @@ footer {
 @media screen and (min-width: 480px) {
   .subscribe-box > input {
     width: 450px;
-  }
-  .footer-address {
-    margin-bottom: 60px;
-  }
-  .social-link {
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) {
