@@ -190,7 +190,7 @@
 
  @media screen and (max-width: 480px) {
      .subscribe-box>input {
-         width: 100%;
+         width: calc(100%-30px);
      }
  }
 
