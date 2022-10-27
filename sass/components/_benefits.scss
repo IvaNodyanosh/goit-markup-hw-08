@@ -54,6 +54,7 @@
     .advantages {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: baseline;
 
         &-title {
             text-align: start;
